@@ -11,5 +11,5 @@ import './index.css'; // es una forma de trabajar css , hay otras
 const divRoot = document.querySelector('#app');
 
 // ReactDOM.render(saludo, divRoot);
-ReactDOM.render(<PrimeraApp/>, divRoot); //cuando lo ponemos dentro de < /> quiere decir que esun componente
+ReactDOM.render(<PrimeraApp saludo="Hola mundo"/>, divRoot); //cuando lo ponemos dentro de < /> quiere decir que esun componente
 
