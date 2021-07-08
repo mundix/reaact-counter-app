@@ -14,5 +14,5 @@ const divRoot = document.querySelector('#app');
 
 // ReactDOM.render(saludo, divRoot);
 // ReactDOM.render(<PrimeraApp saludo="Hola mundo"/>, divRoot); //cuando lo ponemos dentro de < /> quiere decir que esun componente
-ReactDOM.render(<CounterApp value={23.4}/>, divRoot); 
+ReactDOM.render(<CounterApp value={15}/>, divRoot); 
 
