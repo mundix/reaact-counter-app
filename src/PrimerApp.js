@@ -13,11 +13,10 @@ import PropTypes from 'prop-types';
 // const PrimeraApp = (props) => {
 // Forzar a usar el component con el valor saludo, obligar a enviar el saludo desde PrimeraApp
 // const PrimeraApp = ( {saludo = 'Hola Mundo'}) => {
-const PrimeraApp = ( {saludo}) => {
+// const PrimeraApp = ( {saludo}) => { //Ahora vamos a usar default value
+// const PrimeraApp = ( {saludo, subtitulo = 'Soy un subtitulo'}) => { //una ves definido como defaultTypes
+const PrimeraApp = ( {saludo, subtitulo}) => {
 
-    if( !saludo) {
-        
-    }
     // return <h1>Hola Mundo</h1>;
     //para el return el js debe retornar un objeto a la vez, no se pueden regresar estas dos cosas
     //return 
@@ -38,15 +37,19 @@ const PrimeraApp = ( {saludo}) => {
             {/* <h1>Hola Mundo</h1> */}
             {/* <h1>{JSON.stringify(saludos, null, 3)}</h1> */}
             <h1>{ saludo }</h1>
-            <p>Mi Primera App</p>
+            <p>{subtitulo}</p>
         </div>
         );
 }   
+//Para valores por defecto
 
 PrimeraApp.propTypes = {
     // saludo: PropTypes.string //String pero no obligatorio. 
     saludo: PropTypes.string.isRequired, //String obligatorio
     otra: PropTypes.number,
+}
+PrimeraApp.defaultProps = {
+    subtitulo: 'Soy un subtitulo'
 }
 
 //Esperamos que devuelva HTML 
