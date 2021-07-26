@@ -49,6 +49,17 @@ describe('Archivo de pruebas de <CounterApp/>', () => {
     });
     
     
+    test('Probado el Reset Button', () => {
+        const wrapper = shallow( <CounterApp value={ 105 }/>);
+
+        //Necesito cambiar el texto 
+        wrapper.find('button').at(0).simulate('click');
+        wrapper.find('button').at(0).simulate('click');
+        wrapper.find('button').at(1).simulate('click');
+        const counterText = wrapper.find('h2').text().trim();
+
+        expect(counterText).toBe('105');
+    })
     
 
 });
